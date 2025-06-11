@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Season 4 Episode 3</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-color: #fcfaf2;
+      --card-bg: #ffffff;
+      --lilac-bg: #e6e6fa;
+      --primary-color: #e76f51;
+      --text-color: #264653;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    /* Reset */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      flex: 1;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary-color);
+      font-weight: 600;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+
+    .card {
+      position: relative;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 8px var(--shadow);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Alternate background colors: white for odd, lilac for even cards */
+    .card:nth-of-type(odd) {
+      background-color: var(--card-bg);
+    }
+    .card:nth-of-type(even) {
+      background-color: var(--lilac-bg);
+    }
+
+    /* Rotate left for odd, right for even on hover */
+    .card:nth-of-type(odd):hover {
+      transform: rotate(-5deg);
+      box-shadow: 0 8px 16px var(--shadow);
+    }
+    .card:nth-of-type(even):hover {
+      transform: rotate(5deg);
+      box-shadow: 0 8px 16px var(--shadow);
+    }
+
+    /* Hover overlay text */
+    .card::after {
+      content: attr(data-hover-text);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.7);
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      pointer-events: none;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .card:hover::after {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    /* Hide original text on hover */
+    .card:hover p {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    p {
+      margin-bottom: 0.75rem;
+      transition: opacity 0.2s ease;
+    }
+
+    .line-break {
+      white-space: pre-wrap;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-color);
+      padding-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      h1 { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>
+      Hello Darshuu<br>
+      Welcome to Season 4 Episode 3<br>
+      of<br>
+      How to Make Darshani Smile
+    </h1>
+
+    <div class="card" data-hover-text="You">
+      <p>So Darshuu, aaj I thought of using something jo mere background se related hai. Finally after 2 years, I did coding again, hehe.</p>
+    </div>
+
+    <div class="card" data-hover-text="are">
+      <p>Darshuu, today I want to appreciate your <strong>sense of aesthetics</strong>. I am not sure how you do it, I guess it's a born talent but you have an innate sense of keeping things beautiful.</p>
+    </div>
+
+    <div class="card" data-hover-text="the">
+      <p>Mtlb I have seen your outfits, your room, your drawings, your Instagram stories, and I appreciate them a lot. You just know the perfect colours, perfect orientation, perfect elements of what should be used.</p>
+    </div>
+
+    <div class="card line-break" data-hover-text="prettiest">
+      <p>Us din I was exploring your Instagram profile just to wonder ki bhaii koi itne achche and aesthetic outfits with stories and posts kaise daal skta.<br>
+      I also observed your knowledge of colors (I guess girl power is this) and just how perfectly you knew what outfit combination will look best on me in grad trip shopping.</p>
+    </div>
+
+    <div class="card" data-hover-text="sweetest">
+      <p>Tumhare sare outfit, be it your style of matchy-matchy stuff or be it your born talent of making everything sundar sundar, they have just made me realise how beautiful you are and how creative your mind is. They have contributed a lot in forming my official crush, hehe.</p>
+    </div>
+
+    <div class="card" data-hover-text="cutest">
+      <p>I also saw your aesthetic sense in your submission reports and internship PPTs. Dekha tha aapne last tak kitni sundar sundar bana di thi slides. Honestly, keep it up yaar and I hope kabhi bhi nazar na lage aapko. You are so so beautiful, that I guess whatever you do turns beautiful too, hehe.</p>
+    </div>
+
+    <div class="card" data-hover-text="princess">
+      <p>So Darshuu, I am big fan of your aesthetic sense and jab bhi mai koi bhi story ya post karoonga ya kabhi bhi shopping ya kuch decorative stuff loonga, toh please please please be my mentor. I just love this talent of yours and I wish that tum isko hamesha continue karna.</p>
+    </div>
+  </div>
+
+    <footer>&copy; DD for the win forever</footer>
+</body>
+</html>
